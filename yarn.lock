@@ -10262,6 +10262,11 @@ react-native-platform-touchable@^1.1.1:
   resolved "https://registry.yarnpkg.com/react-native-platform-touchable/-/react-native-platform-touchable-1.1.1.tgz#fde4acc65eea585d28b164d0c3716a42129a68e4"
   integrity sha1-/eSsxl7qWF0osWTQw3FqQhKaaOQ=
 
+react-native-reanimated@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/react-native-reanimated/-/react-native-reanimated-1.0.0.tgz#d4e356e852ec55611de565d8791542eeb25a45ae"
+  integrity sha512-jfg+lYZ2QeeV+JMibjXwHoLDZIRVwZT2qdvDDmbAsMmxRNGI95evMPXKWa3BqkzWLb2SlZ2T/MBSGrqt/CiCAQ==
+
 react-native-responsive-ui@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/react-native-responsive-ui/-/react-native-responsive-ui-1.1.1.tgz#eb41839d4f3951ff025660185c36a9a9ce33759f"
@@ -10402,6 +10407,11 @@ react-native@0.58.6:
     xcode "^1.0.0"
     xmldoc "^0.4.0"
     yargs "^9.0.0"
+
+react-navigation-animated-switch@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/react-navigation-animated-switch/-/react-navigation-animated-switch-0.1.0.tgz#bcc3b3beba484a2fc85046503a85e7a5c4b59dca"
+  integrity sha512-zXTNNYjFtgO4ZtD99NrnjeKZVScpV/hpaN6lW8vm12h2kKEU1rQFAe5xtULeM6ikSAluc2Evw5cD8Mi/dnHumA==
 
 react-navigation-drawer@1.2.0:
   version "1.2.0"

@@ -1,10 +1,12 @@
 import React from 'react';
 import {
-	createStackNavigator, createAppContainer, createSwitchNavigator, createDrawerNavigator
+	createStackNavigator, createAppContainer, createDrawerNavigator
 } from 'react-navigation';
 import { Provider } from 'react-redux';
 import { useScreens } from 'react-native-screens'; // eslint-disable-line import/no-unresolved
 import { Linking } from 'react-native';
+import createAnimatedSwitchNavigator from 'react-navigation-animated-switch';
+import { Transition } from 'react-native-reanimated';
 
 import { appInit } from './actions';
 import { deepLinkingOpen } from './actions/deepLinking';
@@ -168,7 +170,7 @@ const SetUsernameStack = createStackNavigator({
 	SetUsernameView
 });
 
-const App = createAppContainer(createSwitchNavigator(
+const App = createAppContainer(createAnimatedSwitchNavigator(
 	{
 		OutsideStack: OutsideStackModal,
 		InsideStack: InsideStackModal,
