@@ -37,6 +37,7 @@ import ForgotPasswordView from './views/ForgotPasswordView';
 import RegisterView from './views/RegisterView';
 import OAuthView from './views/OAuthView';
 import SetUsernameView from './views/SetUsernameView';
+import AutoTranslateView from './views/AutoTranslateView';
 import { HEADER_BACKGROUND, HEADER_TITLE, HEADER_BACK } from './constants/colors';
 import parseQuery from './lib/methods/helpers/parseQuery';
 import { initializePushNotifications, onNotification } from './push';
@@ -114,7 +115,8 @@ const ChatsStack = createStackNavigator({
 	SearchMessagesView,
 	PinnedMessagesView,
 	SelectedUsersView,
-	ThreadMessagesView
+	ThreadMessagesView,
+	AutoTranslateView
 }, {
 	defaultNavigationOptions: defaultHeader
 });

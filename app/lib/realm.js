@@ -89,7 +89,9 @@ const subscriptionSchema = {
 		broadcast: { type: 'bool', optional: true },
 		prid: { type: 'string', optional: true },
 		draftMessage: { type: 'string', optional: true },
-		lastThreadSync: 'date?'
+		lastThreadSync: 'date?',
+		autoTranslate: { type: 'bool', optional: true },
+		autoTranslateLanguage: { type: 'string', optional: true }
 	}
 };
 
@@ -340,6 +342,16 @@ const activeUsersSchema = {
 		username: 'string?',
 		status: 'string?',
 		utcOffset: 'double?'
+
+	}
+};
+
+const autoTranslateLanguagesSchema = {
+	name: 'autoTranslateLanguages',
+	primaryKey: 'value',
+	properties: {
+		value: 'string',
+		label: { type: 'string', optional: true }
 	}
 };
 
@@ -362,7 +374,8 @@ const schema = [
 	messagesReactionsUsernamesSchema,
 	rolesSchema,
 	userMutedInRoomSchema,
-	uploadsSchema
+	uploadsSchema,
+	autoTranslateLanguagesSchema
 ];
 
 const inMemorySchema = [usersTypingSchema, activeUsersSchema];

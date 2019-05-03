@@ -252,6 +252,13 @@ export default class RoomActionsView extends LoggedView {
 					route: 'PinnedMessagesView',
 					params: { rid, t },
 					testID: 'room-actions-pinned'
+				},
+				{
+					icon: 'language',
+					name: I18n.t('Auto_translate'),
+					route: 'AutoTranslateView',
+					params: { rid, t },
+					testID: 'room-actions-auto-translate'
 				}
 			],
 			renderItem: this.renderItem

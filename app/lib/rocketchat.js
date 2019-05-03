@@ -634,6 +634,17 @@ const RocketChat = {
 		// RC 0.51.0
 		return this.sdk.methodCall('saveUserPreferences', params);
 	},
+	saveAutoTranslate(rid, params) {
+		// RC 0.54.0
+		let ret = true;
+		if (params.autoTranslate !== undefined) {
+			ret = ret && this.sdk.methodCall('autoTranslate.saveSettings', rid, 'autoTranslate', params.autoTranslate ? '1' : '0');
+		}
+		if (params.autoTranslateLanguage !== undefined) {
+			ret = ret && this.sdk.methodCall('autoTranslate.saveSettings', rid, 'autoTranslateLanguage', params.autoTranslateLanguage);
+		}
+		return ret;
+	},
 	saveNotificationSettings(roomId, notifications) {
 		// RC 0.63.0
 		return this.sdk.post('rooms.saveNotification', { roomId, notifications });
