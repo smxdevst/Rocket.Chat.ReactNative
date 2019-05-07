@@ -10,6 +10,11 @@ export const merge = (subscription, room) => {
 	if (!subscription) {
 		return;
 	}
+
+	if (subscription.autoTranslate === undefined) {
+		subscription.autoTranslate = false;
+	}
+
 	if (room) {
 		if (room.rid) {
 			subscription.rid = room.rid;

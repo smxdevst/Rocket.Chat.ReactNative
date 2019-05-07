@@ -131,7 +131,7 @@ export default class AutoTranslateView extends LoggedView {
 		if (nextState.saving !== saving) {
 			return true;
 		}
-		if (nextState.languages !== languages) {
+		if (nextState.languages && nextState.languages.length !== languages.length) {
 			return true;
 		}
 		if (nextProps.userLanguage !== userLanguage) {
@@ -150,7 +150,6 @@ export default class AutoTranslateView extends LoggedView {
 	}
 
 	updateRoom = () => {
-		console.log('UPDATE ROOM', this.rooms[0]);
 		if (this.rooms.length > 0) {
 			this.setState({ room: JSON.parse(JSON.stringify(this.rooms[0])) });
 		}
