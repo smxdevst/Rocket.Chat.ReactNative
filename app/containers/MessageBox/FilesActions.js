@@ -8,7 +8,8 @@ export default class FilesActions extends PureComponent {
 	static propTypes = {
 		hideActions: PropTypes.func.isRequired,
 		takePhoto: PropTypes.func.isRequired,
-		chooseFromLibrary: PropTypes.func.isRequired
+		chooseFromLibrary: PropTypes.func.isRequired,
+		chooseFile: PropTypes.func.isRequired
 	}
 
 	constructor(props) {
@@ -26,6 +27,10 @@ export default class FilesActions extends PureComponent {
 		this.options.push(I18n.t('Choose_from_library'));
 		this.LIBRARY_INDEX = 2;
 
+		// File
+		this.options.push(I18n.t('Choose_file'));
+		this.FILE_INDEX = 3;
+
 		setTimeout(() => {
 			this.showActionSheet();
 		});
@@ -41,13 +46,18 @@ export default class FilesActions extends PureComponent {
 	}
 
 	handleActionPress = (actionIndex) => {
-		const { takePhoto, chooseFromLibrary, hideActions } = this.props;
+		const {
+			takePhoto, chooseFromLibrary, hideActions, chooseFile
+		} = this.props;
 		switch (actionIndex) {
 			case this.PHOTO_INDEX:
 				takePhoto();
 				break;
 			case this.LIBRARY_INDEX:
 				chooseFromLibrary();
+				break;
+			case this.FILE_INDEX:
+				chooseFile();
 				break;
 			default:
 				break;

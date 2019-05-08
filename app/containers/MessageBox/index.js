@@ -9,6 +9,8 @@ import { KeyboardAccessoryView } from 'react-native-keyboard-input';
 import ImagePicker from 'react-native-image-crop-picker';
 import { BorderlessButton } from 'react-native-gesture-handler';
 import equal from 'deep-equal';
+import { DocumentPicker, DocumentPickerUtil } from 'react-native-document-picker';
+import Reactrotron from 'reactotron-react-native';
 
 import { userTyping as userTypingAction } from '../../actions/room';
 import {
@@ -499,9 +501,9 @@ class MessageBox extends Component {
 		this.setState(prevState => ({ showFilesAction: !prevState.showFilesAction }));
 	}
 
-	sendImageMessage = async(file) => {
+	sendMediaMessage = async(file) => {
 		const { rid, tmid } = this.props;
-
+		Reactrotron.log(file);
 		this.setState({ file: { isVisible: false } });
 		const fileInfo = {
 			name: file.name,
@@ -534,6 +536,22 @@ class MessageBox extends Component {
 		} catch (e) {
 			log('chooseFromLibrary', e);
 		}
+	}
+
+	chooseFile = () => {
+		DocumentPicker.show({
+			filetype: [DocumentPickerUtil.allFiles()]
+		}, (error, res) => {
+		// Android
+			Reactrotron.log(res);
+			this.sendMediaMessage({
+				name: res.fileName,
+				description: '',
+				size: res.fileSize,
+				type: res.type,
+				path: res.uri
+			});
+		});
 	}
 
 	showUploadModal = (file) => {
@@ -775,6 +793,7 @@ class MessageBox extends Component {
 				hideActions={this.toggleFilesActions}
 				takePhoto={this.takePhoto}
 				chooseFromLibrary={this.chooseFromLibrary}
+				chooseFile={this.chooseFile}
 			/>
 		);
 	}
@@ -839,7 +858,7 @@ class MessageBox extends Component {
 					isVisible={(file && file.isVisible)}
 					file={file}
 					close={() => this.setState({ file: {} })}
-					submit={this.sendImageMessage}
+					submit={this.sendMediaMessage}
 				/>
 			]
 		);
