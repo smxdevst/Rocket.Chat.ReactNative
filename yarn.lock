@@ -10351,6 +10351,11 @@ react-native-dialog@^5.6.0:
     prop-types "^15.7.2"
     react-native-modal "^9.0.0"
 
+react-native-document-picker@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/react-native-document-picker/-/react-native-document-picker-2.3.0.tgz#5a09735b5c905d85064260e34b053f8d37285634"
+  integrity sha512-bHMyAOzFl+II0ZdfzobKsZKvTErmXfmQGalpxpGbeN8+/uhfhUcdp4WuIMecZhFyX6rbj3h3XXLdA12hVlGgmw==
+
 "react-native-fabric@github:corymsmith/react-native-fabric#523a4edab3b2bf55ea9eeea2cf0dde82c5c29dd4":
   version "0.5.2"
   resolved "https://codeload.github.com/corymsmith/react-native-fabric/tar.gz/523a4edab3b2bf55ea9eeea2cf0dde82c5c29dd4"
