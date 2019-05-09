@@ -514,7 +514,7 @@ class MessageBox extends Component {
 		try {
 			await RocketChat.sendFileMessage(rid, fileInfo, tmid);
 		} catch (e) {
-			log('sendImageMessage', e);
+			log('sendMediaMessage', e);
 		}
 	}
 
