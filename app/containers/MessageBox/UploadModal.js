@@ -13,6 +13,7 @@ import I18n from '../../i18n';
 import sharedStyles from '../../views/Styles';
 import { isIOS } from '../../utils/deviceInfo';
 import { COLOR_PRIMARY, COLOR_BACKGROUND_CONTAINER, COLOR_WHITE } from '../../constants/colors';
+import { CustomIcon } from '../../lib/Icons';
 
 const cancelButtonColor = COLOR_BACKGROUND_CONTAINER;
 
@@ -62,6 +63,12 @@ const styles = StyleSheet.create({
 	},
 	androidButtonText: {
 		fontSize: 18,
+		textAlign: 'center'
+	},
+	fileIcon: {
+		color: COLOR_PRIMARY,
+		margin: 20,
+		flex: 1,
 		textAlign: 'center'
 	}
 
@@ -166,9 +173,17 @@ export default class UploadModal extends Component {
 		);
 	}
 
+	renderPreview() {
+		const { file } = this.props;
+		if (file.mime && file.mime.match(/image/)) {
+			return (<Image source={{ isStatic: true, uri: file.path }} style={styles.image} />);
+		}
+		return (<CustomIcon name='file-generic' size={72} style={styles.fileIcon} />);
+	}
+
 	render() {
 		const { window: { width }, isVisible, close } = this.props;
-		const { name, description, file } = this.state;
+		const { name, description } = this.state;
 		return (
 			<Modal
 				isVisible={isVisible}
@@ -186,7 +201,7 @@ export default class UploadModal extends Component {
 					</View>
 
 					<ScrollView style={styles.scrollView}>
-						<Image source={{ isStatic: true, uri: file.path }} style={styles.image} />
+						{this.renderPreview()}
 						<TextInput
 							placeholder={I18n.t('File_name')}
 							value={name}

@@ -10,7 +10,6 @@ import ImagePicker from 'react-native-image-crop-picker';
 import { BorderlessButton } from 'react-native-gesture-handler';
 import equal from 'deep-equal';
 import { DocumentPicker, DocumentPickerUtil } from 'react-native-document-picker';
-import Reactrotron from 'reactotron-react-native';
 
 import { userTyping as userTypingAction } from '../../actions/room';
 import {
@@ -503,7 +502,6 @@ class MessageBox extends Component {
 
 	sendMediaMessage = async(file) => {
 		const { rid, tmid } = this.props;
-		Reactrotron.log(file);
 		this.setState({ file: { isVisible: false } });
 		const fileInfo = {
 			name: file.name,
@@ -543,14 +541,16 @@ class MessageBox extends Component {
 			filetype: [DocumentPickerUtil.allFiles()]
 		}, (error, res) => {
 		// Android
-			Reactrotron.log(res);
-			this.sendMediaMessage({
-				name: res.fileName,
-				description: '',
-				size: res.fileSize,
-				type: res.type,
-				path: res.uri
-			});
+			if (!error) {
+				this.showUploadModal({
+					filename: res.fileName,
+					size: res.fileSize,
+					mime: res.type,
+					path: res.uri
+				});
+			} else {
+				log('chooseFile', error);
+			}
 		});
 	}
 
