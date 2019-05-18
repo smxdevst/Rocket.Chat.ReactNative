@@ -87,6 +87,7 @@ export default {
 	Activity: 'Atividade',
 	Add_Reaction: 'Reagir',
 	Add_Server: 'Adicionar servidor',
+	Administration: 'Administração',
 	Add_user: 'Adicionar usuário',
 	Alert: 'Alerta',
 	alert: 'alerta',

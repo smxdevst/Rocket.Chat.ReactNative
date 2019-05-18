@@ -81,7 +81,7 @@ export default {
 	Add_Reaction: 'Add Reaction',
 	Add_Server: 'Add Server',
 	Add_user: 'Add user',
-	Admin_Panel: 'Admin Panel',
+	Administration: 'Administration',
 	Alert: 'Alert',
 	alert: 'alert',
 	alerts: 'alerts',
