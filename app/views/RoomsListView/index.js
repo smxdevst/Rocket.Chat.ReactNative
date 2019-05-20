@@ -12,7 +12,6 @@ import database, { safeAddListener } from '../../lib/realm';
 import RocketChat from '../../lib/rocketchat';
 import RoomItem, { ROW_HEIGHT } from '../../presentation/RoomItem';
 import styles from './styles';
-import LoggedView from '../View';
 import log from '../../utils/log';
 import I18n from '../../i18n';
 import SortDropdown from './SortDropdown';
@@ -20,8 +19,8 @@ import ServerDropdown from './ServerDropdown';
 import {
 	toggleSortDropdown as toggleSortDropdownAction,
 	openSearchHeader as openSearchHeaderAction,
-	closeSearchHeader as closeSearchHeaderAction
-	// roomsRequest as roomsRequestAction
+	closeSearchHeader as closeSearchHeaderAction,
+	roomsRequest as roomsRequestAction
 } from '../../actions/rooms';
 import { appStart as appStartAction } from '../../actions';
 import debounce from '../../utils/debounce';
@@ -56,11 +55,10 @@ const keyExtractor = item => item.rid;
 	toggleSortDropdown: () => dispatch(toggleSortDropdownAction()),
 	openSearchHeader: () => dispatch(openSearchHeaderAction()),
 	closeSearchHeader: () => dispatch(closeSearchHeaderAction()),
-	appStart: () => dispatch(appStartAction())
-	// roomsRequest: () => dispatch(roomsRequestAction())
+	appStart: () => dispatch(appStartAction()),
+	roomsRequest: () => dispatch(roomsRequestAction())
 }))
-/** @extends React.Component */
-export default class RoomsListView extends LoggedView {
+export default class RoomsListView extends React.Component {
 	static navigationOptions = ({ navigation }) => {
 		const searching = navigation.getParam('searching');
 		const cancelSearchingAndroid = navigation.getParam('cancelSearchingAndroid');
@@ -106,16 +104,16 @@ export default class RoomsListView extends LoggedView {
 		showUnread: PropTypes.bool,
 		useRealName: PropTypes.bool,
 		StoreLastMessage: PropTypes.bool,
-		// appState: PropTypes.string,
+		appState: PropTypes.string,
 		toggleSortDropdown: PropTypes.func,
 		openSearchHeader: PropTypes.func,
 		closeSearchHeader: PropTypes.func,
-		appStart: PropTypes.func
-		// roomsRequest: PropTypes.func
+		appStart: PropTypes.func,
+		roomsRequest: PropTypes.func
 	}
 
 	constructor(props) {
-		super('RoomsListView', props);
+		super(props);
 		console.time(`${ this.constructor.name } init`);
 		console.time(`${ this.constructor.name } mount`);
 
@@ -142,7 +140,9 @@ export default class RoomsListView extends LoggedView {
 		this.getSubscriptions();
 		const { navigation } = this.props;
 		navigation.setParams({
-			onPressItem: this._onPressItem, initSearchingAndroid: this.initSearchingAndroid, cancelSearchingAndroid: this.cancelSearchingAndroid
+			onPressItem: this._onPressItem,
+			initSearchingAndroid: this.initSearchingAndroid,
+			cancelSearchingAndroid: this.cancelSearchingAndroid
 		});
 		console.timeEnd(`${ this.constructor.name } mount`);
 	}
@@ -185,7 +185,7 @@ export default class RoomsListView extends LoggedView {
 
 	componentDidUpdate(prevProps) {
 		const {
-			sortBy, groupByType, showFavorites, showUnread
+			sortBy, groupByType, showFavorites, showUnread, appState, roomsRequest
 		} = this.props;
 
 		if (!(
@@ -195,11 +195,9 @@ export default class RoomsListView extends LoggedView {
 			&& (prevProps.showUnread === showUnread)
 		)) {
 			this.getSubscriptions();
+		} else if (appState === 'foreground' && appState !== prevProps.appState) {
+			roomsRequest();
 		}
-		// removed for now... we may not need it anymore
-		// else if (appState === 'foreground' && appState !== prevProps.appState) {
-		// 	// roomsRequest();
-		// }
 	}
 
 	componentWillUnmount() {
@@ -360,7 +358,7 @@ export default class RoomsListView extends LoggedView {
 					return this.goRoom({ rid: result.room._id, name: username, t: 'd' });
 				}
 			} catch (e) {
-				log('RoomsListView._onPressItem', e);
+				log('err_on_press_item', e);
 			}
 		} else {
 			return this.goRoom(item);
