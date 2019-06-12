@@ -9,7 +9,6 @@ import { SafeAreaView } from 'react-navigation';
 import { connect } from 'react-redux';
 import sharedStyles from '../Styles';
 import SwitchContainer from '../SwitchContainer';
-import LoggedView from '../View';
 import RCActivityIndicator from '../../containers/ActivityIndicator';
 import Loading from '../../containers/Loading';
 import StatusBar from '../../containers/StatusBar';
@@ -19,7 +18,7 @@ import database, { safeAddListener } from '../../lib/realm';
 import RocketChat from '../../lib/rocketchat';
 import KeyboardView from '../../presentation/KeyboardView';
 import debounce from '../../utils/debounce';
-import { showErrorAlert, showToast } from '../../utils/info';
+import { showErrorAlert, Toast } from '../../utils/info';
 import log from '../../utils/log';
 import scrollPersistTaps from '../../utils/scrollPersistTaps';
 
@@ -28,7 +27,7 @@ import scrollPersistTaps from '../../utils/scrollPersistTaps';
 }))
 
 /** @extends React.Component */
-export default class AutoTranslateView extends LoggedView {
+export default class AutoTranslateView extends React.Component {
 	static navigationOptions = () => ({ title: I18n.t('Auto_translate') });
 
 	static propTypes = {
@@ -38,7 +37,7 @@ export default class AutoTranslateView extends LoggedView {
 	}
 
 	constructor(props) {
-		super('AutoTranslateView', props);
+		super(props);
 		const rid = props.navigation.getParam('rid');
 		let room = props.navigation.getParam('room');
 		this.rooms = database.objects('subscriptions').filtered('rid = $0', rid);
@@ -198,7 +197,7 @@ export default class AutoTranslateView extends LoggedView {
 			await RocketChat.saveAutoTranslate(room.rid, params);
 			this.setState({ saving: false });
 			setTimeout(() => {
-				showToast(I18n.t('Preferences_saved'));
+				this.toast.show(I18n.t('Preferences_saved'));
 			}, 300);
 		} catch (e) {
 			this.setState({ saving: false });
@@ -271,6 +270,7 @@ export default class AutoTranslateView extends LoggedView {
 							<Text style={sharedStyles.button} accessibilityTraits='button'>{I18n.t('SAVE')}</Text>
 						</TouchableOpacity>
 						<Loading visible={saving} />
+						<Toast ref={toast => this.toast = toast} />
 					</SafeAreaView>
 				</ScrollView>
 			</KeyboardView>
