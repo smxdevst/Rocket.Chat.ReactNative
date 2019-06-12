@@ -12,7 +12,9 @@ import {
 	toggleStarFailure,
 	togglePinSuccess,
 	togglePinFailure,
-	replyInit
+	replyInit,
+	translateSuccess,
+	translateFailure
 } from '../actions/messages';
 import RocketChat from '../lib/rocketchat';
 import database from '../lib/realm';
@@ -81,11 +83,27 @@ const handleReplyBroadcast = function* handleReplyBroadcast({ message }) {
 	}
 };
 
+const handleTranslateRequest = function* handleTranslateRequest({ message }) {
+	try {
+		const { rid, translations } = message;
+		const subscriptions = database.objects('subscriptions').filtered('rid = $0', rid);
+		if (subscriptions.length && subscriptions[0].translateLanguage) {
+			const language = subscriptions[0].translateLanguage;
+			if (language && translations && translations[language]) {
+				yield put(translateSuccess());
+			}
+		}
+	} catch (error) {
+		yield put(translateFailure(error));
+	}
+};
+
 const root = function* root() {
 	yield takeLatest(MESSAGES.DELETE_REQUEST, handleDeleteRequest);
 	yield takeLatest(MESSAGES.EDIT_REQUEST, handleEditRequest);
 	yield takeLatest(MESSAGES.TOGGLE_STAR_REQUEST, handleToggleStarRequest);
 	yield takeLatest(MESSAGES.TOGGLE_PIN_REQUEST, handleTogglePinRequest);
 	yield takeLatest(MESSAGES.REPLY_BROADCAST, handleReplyBroadcast);
+	yield takeLatest(MESSAGES.TRANSLATE_REQUEST, handleTranslateRequest);
 };
 export default root;

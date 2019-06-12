@@ -521,6 +521,9 @@ const RocketChat = {
 		// RC 0.59.0
 		return this.sdk.post('chat.pinMessage', { messageId: message._id });
 	},
+	translateMessage(message) {
+		const { _id, msg, rid } = message;
+	},
 	reportMessage(messageId) {
 		return this.sdk.post('chat.reportMessage', { messageId, description: 'Message reported by user' });
 	},

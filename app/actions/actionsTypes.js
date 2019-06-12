@@ -50,7 +50,10 @@ export const MESSAGES = createRequestTypes('MESSAGES', [
 	'REPLY_INIT',
 	'REPLY_CANCEL',
 	'TOGGLE_REACTION_PICKER',
-	'REPLY_BROADCAST'
+	'REPLY_BROADCAST',
+	'TRANSLATE_REQUEST',
+	'TRANSLATE_SUCCESS',
+	'TRANSLATE_FAILURE'
 ]);
 export const CREATE_CHANNEL = createRequestTypes('CREATE_CHANNEL', [...defaultTypes]);
 export const SELECTED_USERS = createRequestTypes('SELECTED_USERS', ['ADD_USER', 'REMOVE_USER', 'RESET', 'SET_LOADING']);

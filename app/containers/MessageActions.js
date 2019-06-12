@@ -11,7 +11,8 @@ import {
 	replyInit as replyInitAction,
 	togglePinRequest as togglePinRequestAction,
 	toggleReactionPicker as toggleReactionPickerAction,
-	toggleStarRequest as toggleStarRequestAction
+	toggleStarRequest as toggleStarRequestAction,
+	translateRequest as translateRequestAction
 } from '../actions/messages';
 import { vibrate } from '../utils/vibration';
 import RocketChat from '../lib/rocketchat';
@@ -26,7 +27,8 @@ import log from '../utils/log';
 		Message_AllowEditing: state.settings.Message_AllowEditing,
 		Message_AllowEditing_BlockEditInMinutes: state.settings.Message_AllowEditing_BlockEditInMinutes,
 		Message_AllowPinning: state.settings.Message_AllowPinning,
-		Message_AllowStarring: state.settings.Message_AllowStarring
+		Message_AllowStarring: state.settings.Message_AllowStarring,
+		AutoTranslate_Enabled: state.settings.AutoTranslate_Enabled
 	}),
 	dispatch => ({
 		actionsHide: () => dispatch(actionsHideAction()),
@@ -35,7 +37,8 @@ import log from '../utils/log';
 		toggleStarRequest: message => dispatch(toggleStarRequestAction(message)),
 		togglePinRequest: message => dispatch(togglePinRequestAction(message)),
 		toggleReactionPicker: message => dispatch(toggleReactionPickerAction(message)),
-		replyInit: (message, mention) => dispatch(replyInitAction(message, mention))
+		replyInit: (message, mention) => dispatch(replyInitAction(message, mention)),
+		translateRequest: message => dispatch(translateRequestAction(message))
 	})
 )
 export default class MessageActions extends React.Component {
@@ -51,12 +54,14 @@ export default class MessageActions extends React.Component {
 		togglePinRequest: PropTypes.func.isRequired,
 		toggleReactionPicker: PropTypes.func.isRequired,
 		replyInit: PropTypes.func.isRequired,
+		translateRequest: PropTypes.func.isRequired,
 		Message_AllowDeleting: PropTypes.bool,
 		Message_AllowDeleting_BlockDeleteInMinutes: PropTypes.number,
 		Message_AllowEditing: PropTypes.bool,
 		Message_AllowEditing_BlockEditInMinutes: PropTypes.number,
 		Message_AllowPinning: PropTypes.bool,
-		Message_AllowStarring: PropTypes.bool
+		Message_AllowStarring: PropTypes.bool,
+		AutoTranslate_Enabled: PropTypes.bool
 	};
 
 	constructor(props) {
@@ -64,7 +69,7 @@ export default class MessageActions extends React.Component {
 		this.handleActionPress = this.handleActionPress.bind(this);
 		this.setPermissions();
 
-		const { Message_AllowStarring, Message_AllowPinning } = this.props;
+		const { Message_AllowStarring, Message_AllowPinning, AutoTranslate_Enabled } = this.props;
 
 		// Cancel
 		this.options = [I18n.t('Cancel')];
@@ -116,6 +121,12 @@ export default class MessageActions extends React.Component {
 		if (!this.isRoomReadOnly() || this.canReactWhenReadOnly()) {
 			this.options.push(I18n.t('Add_Reaction'));
 			this.REACTION_INDEX = this.options.length - 1;
+		}
+
+		// Auto-Translate
+		if (AutoTranslate_Enabled) {
+			this.options.push(I18n.t(props.actionMessage.translated ? 'View_Original' : 'Translate'));
+			this.TRANSLATE_INDEX = this.options.length - 1;
 		}
 
 		// Report
@@ -292,6 +303,11 @@ export default class MessageActions extends React.Component {
 		replyInit(actionMessage, true);
 	}
 
+	handleTranslate = () => {
+		const { actionMessage, translateRequest } = this.props;
+		translateRequest(actionMessage);
+	}
+
 	handleQuote = () => {
 		const { actionMessage, replyInit } = this.props;
 		replyInit(actionMessage, false);
@@ -341,6 +357,9 @@ export default class MessageActions extends React.Component {
 					break;
 				case this.REACTION_INDEX:
 					this.handleReaction();
+					break;
+				case this.TRANSLATE_INDEX:
+					this.handleTranslate();
 					break;
 				case this.REPORT_INDEX:
 					this.handleReport();

@@ -144,3 +144,23 @@ export function replyBroadcast(message) {
 		message
 	};
 }
+
+export function translateRequest(message) {
+	return {
+		type: types.MESSAGES.TRANSLATE_REQUEST,
+		message
+	};
+}
+
+export function translateSuccess() {
+	return {
+		type: types.MESSAGES.TRANSLATE_SUCCESS
+	};
+}
+
+export function translateFailure(err) {
+	return {
+		type: types.MESSAGES.TRANSLATE_FAILURE,
+		err
+	};
+}
