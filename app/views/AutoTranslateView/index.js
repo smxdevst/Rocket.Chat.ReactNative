@@ -95,6 +95,7 @@ export default class AutoTranslateView extends React.Component {
 
 		this.setState({ loading: true });
 
+		// @TODO: The key below has been invalidated! Fetch from settings.
 		const result = await fetch('https://translation.googleapis.com/language/translate/v2/languages?key=AIzaSyAWzGtj3FxCbL3JmtTFRiPO88MJQY5gAl4&target=en').then(response => response.json());
 		this.loadInteraction = InteractionManager.runAfterInteractions(() => {
 			database.write(() => result.data.languages.forEach((language) => {
