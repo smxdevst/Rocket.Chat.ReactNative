@@ -31,7 +31,8 @@ const renderSeparator = () => <View style={styles.separator} />;
 		id: state.login.user && state.login.user.id,
 		token: state.login.user && state.login.user.token
 	},
-	baseUrl: state.settings.Site_Url || state.server ? state.server.server : ''
+	baseUrl: state.settings.Site_Url || state.server ? state.server.server : '',
+	autoTranslateEnabled: state.settings.AutoTranslate_Enabled
 }), dispatch => ({
 	leaveRoom: (rid, t) => dispatch(leaveRoomAction(rid, t))
 }))
@@ -47,7 +48,8 @@ export default class RoomActionsView extends React.Component {
 			id: PropTypes.string,
 			token: PropTypes.string
 		}),
-		leaveRoom: PropTypes.func
+		leaveRoom: PropTypes.func,
+		autoTranslateEnabled: PropTypes.bool
 	}
 
 	constructor(props) {
@@ -250,17 +252,21 @@ export default class RoomActionsView extends React.Component {
 					route: 'MessagesView',
 					params: { rid, t, name: 'Pinned' },
 					testID: 'room-actions-pinned'
-				},
-				{
-					icon: 'language',
-					name: I18n.t('Auto_translate'),
-					route: 'AutoTranslateView',
-					params: { rid, t },
-					testID: 'room-actions-auto-translate'
 				}
 			],
 			renderItem: this.renderItem
 		}];
+
+		const { autoTranslateEnabled } = this.props;
+		if (autoTranslateEnabled) {
+			sections[2].data.push({
+				icon: 'language',
+				name: I18n.t('Auto_translate'),
+				route: 'AutoTranslateView',
+				params: { rid, t },
+				testID: 'room-actions-auto-translate'
+			});
+		}
 
 		if (t === 'd') {
 			sections.push({
