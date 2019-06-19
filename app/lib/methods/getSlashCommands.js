@@ -6,29 +6,30 @@ import log from '../../utils/log';
 export default function() {
 	return new Promise(async(resolve) => {
 		try {
-			// RC 0.70.0
-			const result = await this.sdk.get('roles.list');
+			// RC 0.60.2
+			const result = await this.sdk.get('commands.list');
 
 			if (!result.success) {
+				log('getSlashCommand fetch', result);
 				return resolve();
 			}
 
-			const { roles } = result;
+			const { commands } = result;
 
-			if (roles && roles.length) {
+			if (commands && commands.length) {
 				InteractionManager.runAfterInteractions(() => {
-					database.write(() => roles.forEach((role) => {
+					database.write(() => commands.forEach((command) => {
 						try {
-							database.create('roles', role, true);
+							database.create('slashCommand', command, true);
 						} catch (e) {
-							log('err_get_roles_create', e);
+							log('get_slash_command', e);
 						}
 					}));
 					return resolve();
 				});
 			}
 		} catch (e) {
-			log('err_get_roles', e);
+			log('err_get_slash_command', e);
 			return resolve();
 		}
 	});
