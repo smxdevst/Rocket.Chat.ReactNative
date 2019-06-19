@@ -21614,7 +21614,79 @@ exports[`Storyshots RoomItem list 1`] = `
     >
       Basic
     </Text>
-    View
+    <View
+      collapsable={false}
+      onGestureHandlerEvent={[Function]}
+      onGestureHandlerStateChange={[Function]}
+      onLayout={[Function]}
+      style={
+        Object {
+          "overflow": "hidden",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "bottom": 0,
+            "flexDirection": "row",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "transform": Array [
+              Object {
+                "translateX": -10000,
+              },
+            ],
+          }
+        }
+      >
+        View
+        <View
+          onLayout={[Function]}
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "bottom": 0,
+            "flexDirection": "row-reverse",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "transform": Array [
+              Object {
+                "translateX": -10000,
+              },
+            ],
+          }
+        }
+      >
+        View
+        <View
+          onLayout={[Function]}
+        />
+      </View>
+      <View
+        collapsable={false}
+        onGestureHandlerEvent={[Function]}
+        onGestureHandlerStateChange={[Function]}
+        pointerEvents="auto"
+        style={
+          Object {
+            "transform": Array [
+              Object {
+                "translateX": -0,
+              },
+            ],
+          }
+        }
+      >
+        View
+      </View>
+    </View>
     <Text
       style={
         Array [
@@ -21630,8 +21702,152 @@ exports[`Storyshots RoomItem list 1`] = `
     >
       User
     </Text>
-    View
-    View
+    <View
+      collapsable={false}
+      onGestureHandlerEvent={[Function]}
+      onGestureHandlerStateChange={[Function]}
+      onLayout={[Function]}
+      style={
+        Object {
+          "overflow": "hidden",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "bottom": 0,
+            "flexDirection": "row",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "transform": Array [
+              Object {
+                "translateX": -10000,
+              },
+            ],
+          }
+        }
+      >
+        View
+        <View
+          onLayout={[Function]}
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "bottom": 0,
+            "flexDirection": "row-reverse",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "transform": Array [
+              Object {
+                "translateX": -10000,
+              },
+            ],
+          }
+        }
+      >
+        View
+        <View
+          onLayout={[Function]}
+        />
+      </View>
+      <View
+        collapsable={false}
+        onGestureHandlerEvent={[Function]}
+        onGestureHandlerStateChange={[Function]}
+        pointerEvents="auto"
+        style={
+          Object {
+            "transform": Array [
+              Object {
+                "translateX": -0,
+              },
+            ],
+          }
+        }
+      >
+        View
+      </View>
+    </View>
+    <View
+      collapsable={false}
+      onGestureHandlerEvent={[Function]}
+      onGestureHandlerStateChange={[Function]}
+      onLayout={[Function]}
+      style={
+        Object {
+          "overflow": "hidden",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "bottom": 0,
+            "flexDirection": "row",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "transform": Array [
+              Object {
+                "translateX": -10000,
+              },
+            ],
+          }
+        }
+      >
+        View
+        <View
+          onLayout={[Function]}
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "bottom": 0,
+            "flexDirection": "row-reverse",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "transform": Array [
+              Object {
+                "translateX": -10000,
+              },
+            ],
+          }
+        }
+      >
+        View
+        <View
+          onLayout={[Function]}
+        />
+      </View>
+      <View
+        collapsable={false}
+        onGestureHandlerEvent={[Function]}
+        onGestureHandlerStateChange={[Function]}
+        pointerEvents="auto"
+        style={
+          Object {
+            "transform": Array [
+              Object {
+                "translateX": -0,
+              },
+            ],
+          }
+        }
+      >
+        View
+      </View>
+    </View>
     <Text
       style={
         Array [
@@ -21647,11 +21863,371 @@ exports[`Storyshots RoomItem list 1`] = `
     >
       Type
     </Text>
-    View
-    View
-    View
-    View
-    View
+    <View
+      collapsable={false}
+      onGestureHandlerEvent={[Function]}
+      onGestureHandlerStateChange={[Function]}
+      onLayout={[Function]}
+      style={
+        Object {
+          "overflow": "hidden",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "bottom": 0,
+            "flexDirection": "row",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "transform": Array [
+              Object {
+                "translateX": -10000,
+              },
+            ],
+          }
+        }
+      >
+        View
+        <View
+          onLayout={[Function]}
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "bottom": 0,
+            "flexDirection": "row-reverse",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "transform": Array [
+              Object {
+                "translateX": -10000,
+              },
+            ],
+          }
+        }
+      >
+        View
+        <View
+          onLayout={[Function]}
+        />
+      </View>
+      <View
+        collapsable={false}
+        onGestureHandlerEvent={[Function]}
+        onGestureHandlerStateChange={[Function]}
+        pointerEvents="auto"
+        style={
+          Object {
+            "transform": Array [
+              Object {
+                "translateX": -0,
+              },
+            ],
+          }
+        }
+      >
+        View
+      </View>
+    </View>
+    <View
+      collapsable={false}
+      onGestureHandlerEvent={[Function]}
+      onGestureHandlerStateChange={[Function]}
+      onLayout={[Function]}
+      style={
+        Object {
+          "overflow": "hidden",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "bottom": 0,
+            "flexDirection": "row",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "transform": Array [
+              Object {
+                "translateX": -10000,
+              },
+            ],
+          }
+        }
+      >
+        View
+        <View
+          onLayout={[Function]}
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "bottom": 0,
+            "flexDirection": "row-reverse",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "transform": Array [
+              Object {
+                "translateX": -10000,
+              },
+            ],
+          }
+        }
+      >
+        View
+        <View
+          onLayout={[Function]}
+        />
+      </View>
+      <View
+        collapsable={false}
+        onGestureHandlerEvent={[Function]}
+        onGestureHandlerStateChange={[Function]}
+        pointerEvents="auto"
+        style={
+          Object {
+            "transform": Array [
+              Object {
+                "translateX": -0,
+              },
+            ],
+          }
+        }
+      >
+        View
+      </View>
+    </View>
+    <View
+      collapsable={false}
+      onGestureHandlerEvent={[Function]}
+      onGestureHandlerStateChange={[Function]}
+      onLayout={[Function]}
+      style={
+        Object {
+          "overflow": "hidden",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "bottom": 0,
+            "flexDirection": "row",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "transform": Array [
+              Object {
+                "translateX": -10000,
+              },
+            ],
+          }
+        }
+      >
+        View
+        <View
+          onLayout={[Function]}
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "bottom": 0,
+            "flexDirection": "row-reverse",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "transform": Array [
+              Object {
+                "translateX": -10000,
+              },
+            ],
+          }
+        }
+      >
+        View
+        <View
+          onLayout={[Function]}
+        />
+      </View>
+      <View
+        collapsable={false}
+        onGestureHandlerEvent={[Function]}
+        onGestureHandlerStateChange={[Function]}
+        pointerEvents="auto"
+        style={
+          Object {
+            "transform": Array [
+              Object {
+                "translateX": -0,
+              },
+            ],
+          }
+        }
+      >
+        View
+      </View>
+    </View>
+    <View
+      collapsable={false}
+      onGestureHandlerEvent={[Function]}
+      onGestureHandlerStateChange={[Function]}
+      onLayout={[Function]}
+      style={
+        Object {
+          "overflow": "hidden",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "bottom": 0,
+            "flexDirection": "row",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "transform": Array [
+              Object {
+                "translateX": -10000,
+              },
+            ],
+          }
+        }
+      >
+        View
+        <View
+          onLayout={[Function]}
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "bottom": 0,
+            "flexDirection": "row-reverse",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "transform": Array [
+              Object {
+                "translateX": -10000,
+              },
+            ],
+          }
+        }
+      >
+        View
+        <View
+          onLayout={[Function]}
+        />
+      </View>
+      <View
+        collapsable={false}
+        onGestureHandlerEvent={[Function]}
+        onGestureHandlerStateChange={[Function]}
+        pointerEvents="auto"
+        style={
+          Object {
+            "transform": Array [
+              Object {
+                "translateX": -0,
+              },
+            ],
+          }
+        }
+      >
+        View
+      </View>
+    </View>
+    <View
+      collapsable={false}
+      onGestureHandlerEvent={[Function]}
+      onGestureHandlerStateChange={[Function]}
+      onLayout={[Function]}
+      style={
+        Object {
+          "overflow": "hidden",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "bottom": 0,
+            "flexDirection": "row",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "transform": Array [
+              Object {
+                "translateX": -10000,
+              },
+            ],
+          }
+        }
+      >
+        View
+        <View
+          onLayout={[Function]}
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "bottom": 0,
+            "flexDirection": "row-reverse",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "transform": Array [
+              Object {
+                "translateX": -10000,
+              },
+            ],
+          }
+        }
+      >
+        View
+        <View
+          onLayout={[Function]}
+        />
+      </View>
+      <View
+        collapsable={false}
+        onGestureHandlerEvent={[Function]}
+        onGestureHandlerStateChange={[Function]}
+        pointerEvents="auto"
+        style={
+          Object {
+            "transform": Array [
+              Object {
+                "translateX": -0,
+              },
+            ],
+          }
+        }
+      >
+        View
+      </View>
+    </View>
     <Text
       style={
         Array [
@@ -21667,15 +22243,663 @@ exports[`Storyshots RoomItem list 1`] = `
     >
       Alerts
     </Text>
-    View
-    View
-    View
-    View
-    View
-    View
-    View
-    View
-    View
+    <View
+      collapsable={false}
+      onGestureHandlerEvent={[Function]}
+      onGestureHandlerStateChange={[Function]}
+      onLayout={[Function]}
+      style={
+        Object {
+          "overflow": "hidden",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "bottom": 0,
+            "flexDirection": "row",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "transform": Array [
+              Object {
+                "translateX": -10000,
+              },
+            ],
+          }
+        }
+      >
+        View
+        <View
+          onLayout={[Function]}
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "bottom": 0,
+            "flexDirection": "row-reverse",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "transform": Array [
+              Object {
+                "translateX": -10000,
+              },
+            ],
+          }
+        }
+      >
+        View
+        <View
+          onLayout={[Function]}
+        />
+      </View>
+      <View
+        collapsable={false}
+        onGestureHandlerEvent={[Function]}
+        onGestureHandlerStateChange={[Function]}
+        pointerEvents="auto"
+        style={
+          Object {
+            "transform": Array [
+              Object {
+                "translateX": -0,
+              },
+            ],
+          }
+        }
+      >
+        View
+      </View>
+    </View>
+    <View
+      collapsable={false}
+      onGestureHandlerEvent={[Function]}
+      onGestureHandlerStateChange={[Function]}
+      onLayout={[Function]}
+      style={
+        Object {
+          "overflow": "hidden",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "bottom": 0,
+            "flexDirection": "row",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "transform": Array [
+              Object {
+                "translateX": -10000,
+              },
+            ],
+          }
+        }
+      >
+        View
+        <View
+          onLayout={[Function]}
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "bottom": 0,
+            "flexDirection": "row-reverse",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "transform": Array [
+              Object {
+                "translateX": -10000,
+              },
+            ],
+          }
+        }
+      >
+        View
+        <View
+          onLayout={[Function]}
+        />
+      </View>
+      <View
+        collapsable={false}
+        onGestureHandlerEvent={[Function]}
+        onGestureHandlerStateChange={[Function]}
+        pointerEvents="auto"
+        style={
+          Object {
+            "transform": Array [
+              Object {
+                "translateX": -0,
+              },
+            ],
+          }
+        }
+      >
+        View
+      </View>
+    </View>
+    <View
+      collapsable={false}
+      onGestureHandlerEvent={[Function]}
+      onGestureHandlerStateChange={[Function]}
+      onLayout={[Function]}
+      style={
+        Object {
+          "overflow": "hidden",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "bottom": 0,
+            "flexDirection": "row",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "transform": Array [
+              Object {
+                "translateX": -10000,
+              },
+            ],
+          }
+        }
+      >
+        View
+        <View
+          onLayout={[Function]}
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "bottom": 0,
+            "flexDirection": "row-reverse",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "transform": Array [
+              Object {
+                "translateX": -10000,
+              },
+            ],
+          }
+        }
+      >
+        View
+        <View
+          onLayout={[Function]}
+        />
+      </View>
+      <View
+        collapsable={false}
+        onGestureHandlerEvent={[Function]}
+        onGestureHandlerStateChange={[Function]}
+        pointerEvents="auto"
+        style={
+          Object {
+            "transform": Array [
+              Object {
+                "translateX": -0,
+              },
+            ],
+          }
+        }
+      >
+        View
+      </View>
+    </View>
+    <View
+      collapsable={false}
+      onGestureHandlerEvent={[Function]}
+      onGestureHandlerStateChange={[Function]}
+      onLayout={[Function]}
+      style={
+        Object {
+          "overflow": "hidden",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "bottom": 0,
+            "flexDirection": "row",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "transform": Array [
+              Object {
+                "translateX": -10000,
+              },
+            ],
+          }
+        }
+      >
+        View
+        <View
+          onLayout={[Function]}
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "bottom": 0,
+            "flexDirection": "row-reverse",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "transform": Array [
+              Object {
+                "translateX": -10000,
+              },
+            ],
+          }
+        }
+      >
+        View
+        <View
+          onLayout={[Function]}
+        />
+      </View>
+      <View
+        collapsable={false}
+        onGestureHandlerEvent={[Function]}
+        onGestureHandlerStateChange={[Function]}
+        pointerEvents="auto"
+        style={
+          Object {
+            "transform": Array [
+              Object {
+                "translateX": -0,
+              },
+            ],
+          }
+        }
+      >
+        View
+      </View>
+    </View>
+    <View
+      collapsable={false}
+      onGestureHandlerEvent={[Function]}
+      onGestureHandlerStateChange={[Function]}
+      onLayout={[Function]}
+      style={
+        Object {
+          "overflow": "hidden",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "bottom": 0,
+            "flexDirection": "row",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "transform": Array [
+              Object {
+                "translateX": -10000,
+              },
+            ],
+          }
+        }
+      >
+        View
+        <View
+          onLayout={[Function]}
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "bottom": 0,
+            "flexDirection": "row-reverse",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "transform": Array [
+              Object {
+                "translateX": -10000,
+              },
+            ],
+          }
+        }
+      >
+        View
+        <View
+          onLayout={[Function]}
+        />
+      </View>
+      <View
+        collapsable={false}
+        onGestureHandlerEvent={[Function]}
+        onGestureHandlerStateChange={[Function]}
+        pointerEvents="auto"
+        style={
+          Object {
+            "transform": Array [
+              Object {
+                "translateX": -0,
+              },
+            ],
+          }
+        }
+      >
+        View
+      </View>
+    </View>
+    <View
+      collapsable={false}
+      onGestureHandlerEvent={[Function]}
+      onGestureHandlerStateChange={[Function]}
+      onLayout={[Function]}
+      style={
+        Object {
+          "overflow": "hidden",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "bottom": 0,
+            "flexDirection": "row",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "transform": Array [
+              Object {
+                "translateX": -10000,
+              },
+            ],
+          }
+        }
+      >
+        View
+        <View
+          onLayout={[Function]}
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "bottom": 0,
+            "flexDirection": "row-reverse",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "transform": Array [
+              Object {
+                "translateX": -10000,
+              },
+            ],
+          }
+        }
+      >
+        View
+        <View
+          onLayout={[Function]}
+        />
+      </View>
+      <View
+        collapsable={false}
+        onGestureHandlerEvent={[Function]}
+        onGestureHandlerStateChange={[Function]}
+        pointerEvents="auto"
+        style={
+          Object {
+            "transform": Array [
+              Object {
+                "translateX": -0,
+              },
+            ],
+          }
+        }
+      >
+        View
+      </View>
+    </View>
+    <View
+      collapsable={false}
+      onGestureHandlerEvent={[Function]}
+      onGestureHandlerStateChange={[Function]}
+      onLayout={[Function]}
+      style={
+        Object {
+          "overflow": "hidden",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "bottom": 0,
+            "flexDirection": "row",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "transform": Array [
+              Object {
+                "translateX": -10000,
+              },
+            ],
+          }
+        }
+      >
+        View
+        <View
+          onLayout={[Function]}
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "bottom": 0,
+            "flexDirection": "row-reverse",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "transform": Array [
+              Object {
+                "translateX": -10000,
+              },
+            ],
+          }
+        }
+      >
+        View
+        <View
+          onLayout={[Function]}
+        />
+      </View>
+      <View
+        collapsable={false}
+        onGestureHandlerEvent={[Function]}
+        onGestureHandlerStateChange={[Function]}
+        pointerEvents="auto"
+        style={
+          Object {
+            "transform": Array [
+              Object {
+                "translateX": -0,
+              },
+            ],
+          }
+        }
+      >
+        View
+      </View>
+    </View>
+    <View
+      collapsable={false}
+      onGestureHandlerEvent={[Function]}
+      onGestureHandlerStateChange={[Function]}
+      onLayout={[Function]}
+      style={
+        Object {
+          "overflow": "hidden",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "bottom": 0,
+            "flexDirection": "row",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "transform": Array [
+              Object {
+                "translateX": -10000,
+              },
+            ],
+          }
+        }
+      >
+        View
+        <View
+          onLayout={[Function]}
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "bottom": 0,
+            "flexDirection": "row-reverse",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "transform": Array [
+              Object {
+                "translateX": -10000,
+              },
+            ],
+          }
+        }
+      >
+        View
+        <View
+          onLayout={[Function]}
+        />
+      </View>
+      <View
+        collapsable={false}
+        onGestureHandlerEvent={[Function]}
+        onGestureHandlerStateChange={[Function]}
+        pointerEvents="auto"
+        style={
+          Object {
+            "transform": Array [
+              Object {
+                "translateX": -0,
+              },
+            ],
+          }
+        }
+      >
+        View
+      </View>
+    </View>
+    <View
+      collapsable={false}
+      onGestureHandlerEvent={[Function]}
+      onGestureHandlerStateChange={[Function]}
+      onLayout={[Function]}
+      style={
+        Object {
+          "overflow": "hidden",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "bottom": 0,
+            "flexDirection": "row",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "transform": Array [
+              Object {
+                "translateX": -10000,
+              },
+            ],
+          }
+        }
+      >
+        View
+        <View
+          onLayout={[Function]}
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "bottom": 0,
+            "flexDirection": "row-reverse",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "transform": Array [
+              Object {
+                "translateX": -10000,
+              },
+            ],
+          }
+        }
+      >
+        View
+        <View
+          onLayout={[Function]}
+        />
+      </View>
+      <View
+        collapsable={false}
+        onGestureHandlerEvent={[Function]}
+        onGestureHandlerStateChange={[Function]}
+        pointerEvents="auto"
+        style={
+          Object {
+            "transform": Array [
+              Object {
+                "translateX": -0,
+              },
+            ],
+          }
+        }
+      >
+        View
+      </View>
+    </View>
     <Text
       style={
         Array [
@@ -21691,12 +22915,444 @@ exports[`Storyshots RoomItem list 1`] = `
     >
       Last Message
     </Text>
-    View
-    View
-    View
-    View
-    View
-    View
+    <View
+      collapsable={false}
+      onGestureHandlerEvent={[Function]}
+      onGestureHandlerStateChange={[Function]}
+      onLayout={[Function]}
+      style={
+        Object {
+          "overflow": "hidden",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "bottom": 0,
+            "flexDirection": "row",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "transform": Array [
+              Object {
+                "translateX": -10000,
+              },
+            ],
+          }
+        }
+      >
+        View
+        <View
+          onLayout={[Function]}
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "bottom": 0,
+            "flexDirection": "row-reverse",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "transform": Array [
+              Object {
+                "translateX": -10000,
+              },
+            ],
+          }
+        }
+      >
+        View
+        <View
+          onLayout={[Function]}
+        />
+      </View>
+      <View
+        collapsable={false}
+        onGestureHandlerEvent={[Function]}
+        onGestureHandlerStateChange={[Function]}
+        pointerEvents="auto"
+        style={
+          Object {
+            "transform": Array [
+              Object {
+                "translateX": -0,
+              },
+            ],
+          }
+        }
+      >
+        View
+      </View>
+    </View>
+    <View
+      collapsable={false}
+      onGestureHandlerEvent={[Function]}
+      onGestureHandlerStateChange={[Function]}
+      onLayout={[Function]}
+      style={
+        Object {
+          "overflow": "hidden",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "bottom": 0,
+            "flexDirection": "row",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "transform": Array [
+              Object {
+                "translateX": -10000,
+              },
+            ],
+          }
+        }
+      >
+        View
+        <View
+          onLayout={[Function]}
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "bottom": 0,
+            "flexDirection": "row-reverse",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "transform": Array [
+              Object {
+                "translateX": -10000,
+              },
+            ],
+          }
+        }
+      >
+        View
+        <View
+          onLayout={[Function]}
+        />
+      </View>
+      <View
+        collapsable={false}
+        onGestureHandlerEvent={[Function]}
+        onGestureHandlerStateChange={[Function]}
+        pointerEvents="auto"
+        style={
+          Object {
+            "transform": Array [
+              Object {
+                "translateX": -0,
+              },
+            ],
+          }
+        }
+      >
+        View
+      </View>
+    </View>
+    <View
+      collapsable={false}
+      onGestureHandlerEvent={[Function]}
+      onGestureHandlerStateChange={[Function]}
+      onLayout={[Function]}
+      style={
+        Object {
+          "overflow": "hidden",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "bottom": 0,
+            "flexDirection": "row",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "transform": Array [
+              Object {
+                "translateX": -10000,
+              },
+            ],
+          }
+        }
+      >
+        View
+        <View
+          onLayout={[Function]}
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "bottom": 0,
+            "flexDirection": "row-reverse",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "transform": Array [
+              Object {
+                "translateX": -10000,
+              },
+            ],
+          }
+        }
+      >
+        View
+        <View
+          onLayout={[Function]}
+        />
+      </View>
+      <View
+        collapsable={false}
+        onGestureHandlerEvent={[Function]}
+        onGestureHandlerStateChange={[Function]}
+        pointerEvents="auto"
+        style={
+          Object {
+            "transform": Array [
+              Object {
+                "translateX": -0,
+              },
+            ],
+          }
+        }
+      >
+        View
+      </View>
+    </View>
+    <View
+      collapsable={false}
+      onGestureHandlerEvent={[Function]}
+      onGestureHandlerStateChange={[Function]}
+      onLayout={[Function]}
+      style={
+        Object {
+          "overflow": "hidden",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "bottom": 0,
+            "flexDirection": "row",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "transform": Array [
+              Object {
+                "translateX": -10000,
+              },
+            ],
+          }
+        }
+      >
+        View
+        <View
+          onLayout={[Function]}
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "bottom": 0,
+            "flexDirection": "row-reverse",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "transform": Array [
+              Object {
+                "translateX": -10000,
+              },
+            ],
+          }
+        }
+      >
+        View
+        <View
+          onLayout={[Function]}
+        />
+      </View>
+      <View
+        collapsable={false}
+        onGestureHandlerEvent={[Function]}
+        onGestureHandlerStateChange={[Function]}
+        pointerEvents="auto"
+        style={
+          Object {
+            "transform": Array [
+              Object {
+                "translateX": -0,
+              },
+            ],
+          }
+        }
+      >
+        View
+      </View>
+    </View>
+    <View
+      collapsable={false}
+      onGestureHandlerEvent={[Function]}
+      onGestureHandlerStateChange={[Function]}
+      onLayout={[Function]}
+      style={
+        Object {
+          "overflow": "hidden",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "bottom": 0,
+            "flexDirection": "row",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "transform": Array [
+              Object {
+                "translateX": -10000,
+              },
+            ],
+          }
+        }
+      >
+        View
+        <View
+          onLayout={[Function]}
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "bottom": 0,
+            "flexDirection": "row-reverse",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "transform": Array [
+              Object {
+                "translateX": -10000,
+              },
+            ],
+          }
+        }
+      >
+        View
+        <View
+          onLayout={[Function]}
+        />
+      </View>
+      <View
+        collapsable={false}
+        onGestureHandlerEvent={[Function]}
+        onGestureHandlerStateChange={[Function]}
+        pointerEvents="auto"
+        style={
+          Object {
+            "transform": Array [
+              Object {
+                "translateX": -0,
+              },
+            ],
+          }
+        }
+      >
+        View
+      </View>
+    </View>
+    <View
+      collapsable={false}
+      onGestureHandlerEvent={[Function]}
+      onGestureHandlerStateChange={[Function]}
+      onLayout={[Function]}
+      style={
+        Object {
+          "overflow": "hidden",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "bottom": 0,
+            "flexDirection": "row",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "transform": Array [
+              Object {
+                "translateX": -10000,
+              },
+            ],
+          }
+        }
+      >
+        View
+        <View
+          onLayout={[Function]}
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "bottom": 0,
+            "flexDirection": "row-reverse",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "transform": Array [
+              Object {
+                "translateX": -10000,
+              },
+            ],
+          }
+        }
+      >
+        View
+        <View
+          onLayout={[Function]}
+        />
+      </View>
+      <View
+        collapsable={false}
+        onGestureHandlerEvent={[Function]}
+        onGestureHandlerStateChange={[Function]}
+        pointerEvents="auto"
+        style={
+          Object {
+            "transform": Array [
+              Object {
+                "translateX": -0,
+              },
+            ],
+          }
+        }
+      >
+        View
+      </View>
+    </View>
   </View>
 </RCTScrollView>
 `;

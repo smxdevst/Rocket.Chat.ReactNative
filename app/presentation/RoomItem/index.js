@@ -15,8 +15,6 @@ import UnreadBadge from './UnreadBadge';
 import TypeIcon from './TypeIcon';
 import LastMessage from './LastMessage';
 import { CustomIcon } from '../../lib/Icons';
-import RocketChat from '../../lib/rocketchat';
-import log from '../../utils/log';
 
 export { ROW_HEIGHT };
 
@@ -48,7 +46,9 @@ export default class RoomItem extends React.Component {
 		height: PropTypes.number,
 		favorite: PropTypes.bool,
 		isRead: PropTypes.bool,
-		rid: PropTypes.string
+		rid: PropTypes.string,
+		toggleFav: PropTypes.func,
+		toggleRead: PropTypes.func
 	}
 
 	static defaultProps = {
@@ -83,22 +83,18 @@ export default class RoomItem extends React.Component {
 		this.swipeableRow.close();
 	};
 
-	toggleFav = async() => {
-		try {
-			const { rid, favorite } = this.props;
-			await RocketChat.toggleFavorite(rid, !favorite);
-		} catch (e) {
-			log('error_toggle_favorite', e);
+	toggleFav = () => {
+		const { toggleFav, rid, favorite } = this.props;
+		if (toggleFav) {
+			toggleFav(rid, favorite);
 		}
 		this.close();
 	}
 
-	toggleRead = async() => {
-		try {
-			const { rid, isRead } = this.props;
-			await RocketChat.toggleRead(isRead, rid);
-		} catch (e) {
-			log('error_toggle_read', e);
+	toggleRead = () => {
+		const { toggleRead, rid, isRead } = this.props;
+		if (toggleRead) {
+			toggleRead(rid, isRead);
 		}
 		this.close();
 	}
